@@ -180,6 +180,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\HackerRank\MatrixLayerRotation.cs" />
+    <Compile Include="Classes\HackerRank\QueensAttack.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
