@@ -65,7 +65,7 @@ app.factory('customerCallFactory', ['$http', function ($http) {
     .controller('TestController', ['$scope', '$q', 'customerCallSvc', function ($scope, $q, customerCallSvc) {
     $scope.TestText = 'Test';
     $scope.NewName = '';
-    $scope.NewBirthday = '';
+        $scope.newBirthday = '';
     $scope.customers = [];
     /* Test Data
         [{ Iden: 11, Name: 'Test1', Birthday: '2021-12-28' },
@@ -87,9 +87,9 @@ app.factory('customerCallFactory', ['$http', function ($http) {
     }
 
     $scope.addCustomer = function ($event) {
-        $scope.customers.push({ Iden: 0, Name: $scope.NewName, Birthday: $scope.NewBirthday });
+        $scope.customers.push({ Iden: 0, Name: $scope.NewName, Birthday: $scope.newBirthday });
         $scope.NewName = '';
-        $scope.NewBirthday = '';
+        $scope.newBirthday = '';
     }
     $scope.editCustomer = function ($event) {
         if (!updateData.find(function (id) { return id == this.customer.Iden; })) {

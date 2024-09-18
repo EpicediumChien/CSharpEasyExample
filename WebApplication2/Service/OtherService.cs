@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WebApplication2.Models;
+using EasyExample.Models;
 
-namespace WebApplication2.Service
+namespace EasyExample.Service
 {
     public class OtherService : IOtherService
     {

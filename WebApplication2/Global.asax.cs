@@ -2,9 +2,11 @@
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
-using WebApplication2.App_Start;
+using EasyExample.App_Start;
+using System.Web.Services.Description;
+using System.Web.Http;
 
-namespace WebApplication2
+namespace EasyExample
 {
     public class MvcApplication : System.Web.HttpApplication
     {
@@ -14,8 +16,11 @@ namespace WebApplication2
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-            WebApiConfig.RegisterWebAPI(RouteTable.Routes);
-            ServiceConfig.RegisterServices(new ServiceCollection());
+            var services = new Microsoft.Extensions.DependencyInjection.ServiceCollection();
+            ServiceConfig.RegisterServices(services);
+            var serviceProvider = services.BuildServiceProvider();
+            DependencyResolver.SetResolver(new DefaultDependencyResolver(serviceProvider));
+            GlobalConfiguration.Configure(WebApiConfig.Register);
         }
     }
 }

@@ -179,6 +179,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\HackerRank\MatrixLayerRotation.cs" />
+    <Compile Include="Classes\HackerRank\QueensAttack.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -193,6 +195,7 @@
     </Compile>
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\infrastucture\DBConnect.cs" />
+    <Compile Include="Models\infrastucture\DefaultDependencyResolver.cs" />
     <Compile Include="Models\Node.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\ICustomerRepository.cs" />

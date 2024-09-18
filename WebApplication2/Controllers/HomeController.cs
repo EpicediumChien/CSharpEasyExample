@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using WebApplication2.Models;
+using EasyExample.Models;
 
-namespace WebApplication2.Controllers
+namespace EasyExample.Controllers
 {
     public class HomeController : Controller
     {

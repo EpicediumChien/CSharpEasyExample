@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using WebApplication2.Models;
+using EasyExample.Models;
 
-namespace WebApplication2.Service
+namespace EasyExample.Service
 {
     public interface ICustomerService
     {
