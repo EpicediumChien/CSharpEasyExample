@@ -6,22 +6,23 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Web.Mvc;
 using WebAPITest1.Models.infrastructure;
-using WebApplication2.Models;
-using WebApplication2.Service;
+using EasyExample.Models;
+using EasyExample.Service;
+using EasyExample.Repository;
 
-namespace WebApplication2.APIController
+namespace EasyExample.APIController
 {
     public class CustomersController : Controller
     {
-        //private readonly ICustomerService _customerService;
         private readonly DBConnect _dBConnect;
-        private readonly IOtherService _otherService;
+        public readonly ICustomerService _customerService;
+        public readonly IOtherService _otherService;
 
-        public CustomersController(IOtherService otherService/*ICustomerService customerService*/)
+        public CustomersController()
         {
-            //_customerService = customerService;
             _dBConnect = new DBConnect();
-            _otherService = otherService;
+            _customerService = new CustomerService(new CustomerRepository());
+            _otherService = new OtherService();
         }
 
         [HttpGet]

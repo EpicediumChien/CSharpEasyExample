@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using WebApplication2.Models;
-using WebApplication2.Repository;
+using EasyExample.Models;
+using EasyExample.Repository;
 
-namespace WebApplication2.Service
+namespace EasyExample.Service
 {
     public class CustomerService : ICustomerService
     {

@@ -1,17 +1,21 @@
 ﻿using System.Web.Http;
 using System.Web.Routing;
-using WebApplication2.Classes.WebAPI;
+using EasyExample.Classes.WebAPI;
+using static Org.BouncyCastle.Math.EC.ECCurve;
 
-namespace WebApplication2.App_Start
+namespace EasyExample.App_Start
 {
     public class WebApiConfig
     {
-        public static void RegisterWebAPI(RouteCollection routes)
+        public static void Register(HttpConfiguration config)
         {
-            routes.MapHttpRoute(
+            config.MapHttpAttributeRoutes();
+
+            config.Routes.MapHttpRoute(
                 name: "DefaultApi",
-                routeTemplate: "api/{controller}/{action}",
-                defaults: new { action = RouteParameter.Optional }).RouteHandler = new SessionRouteHandlerReadOnly();
+                routeTemplate: "api/{controller}/{action}/{id}",
+                defaults: new { id = RouteParameter.Optional }
+            );
         }
     }
 }

@@ -2,7 +2,7 @@
 using System.Web.Routing;
 using System.Web.SessionState;
 
-namespace WebApplication2.Classes.WebAPI
+namespace EasyExample.Classes.WebAPI
 {
     public class SessionControllerHandlerReadOnly : HttpControllerHandler, IReadOnlySessionState
     {

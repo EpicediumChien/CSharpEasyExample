@@ -1,7 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
-using WebApplication2.Models;
+using EasyExample.Models;
 
 namespace WebAPITest1.Models.infrastructure
 {
@@ -23,9 +23,9 @@ namespace WebAPITest1.Models.infrastructure
         private void Initialize()
         {
             server = "127.0.0.1";//"127.0.0.1:3306";
-            database = "tdb";
+            database = "dbo";
             uid = "root";
-            password = "qwerty123456";
+            password = "1qaz@WSX";
             string connectionString;
             connectionString = "SERVER=" + server + ";" + "DATABASE=" + database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";Allow Zero Datetime=true;";
 

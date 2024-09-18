@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Routing;
 
-namespace WebApplication2.Classes.WebAPI
+namespace EasyExample.Classes.WebAPI
 {
     public class SessionRouteHandlerReadOnly : IRouteHandler
     {
